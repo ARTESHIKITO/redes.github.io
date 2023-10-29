@@ -1,1 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
 
+:root {
+    --text-color: #fff;
+    --bg-color: #222327;
+    --main-color: #ad0303;
+    --black-transparent: rgba(0, 0, 0, 0.5);
+    --red-transparent: rgba(139, 0, 0, 0.5);
+    --bg-transparent-color: rgba(34, 35, 39, .2);
+    --text-transparent-color: rgba(255, 255, 255, .5);
+}
+
+html {
+    background: var(--text-color);
+}
+
+body {
+    background: linear-gradient(0deg, var(--black-transparent), var(--black-transparent)),
+        url("../res/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+section,
+footer {
+    padding: 0 40px;
+    display: flex;
+    background: linear-gradient(0deg, var(--black-transparent), var(--black-transparent));
+}
+
+
+/* SECTION */
+
+section {
+    height: 81.2vh;
+    color: var(--text-color);
+    padding: 90px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, var(--black-transparent), var(--black-transparent));
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, var(--red-transparent), var(--red-transparent));
+    border-radius: 50%;
+    /* Establecer el border-radius en 50% para crear un círculo */
+    width: 300px;
+    /* Ancho deseado del círculo */
+    height: 300px;
+    /* Altura deseada del círculo (puedes ajustar según tus necesidades) */
+}
+
+
+section div h1 {
+    font-size: 100px;
+    font: 'Noto Sans JP';
+}
+
+section div h2 {
+    font-size: 40px;
+    font: 'Noto Sans JP';
+}
+
+/* FOOTER */
+
+footer {
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+    background: linear-gradient(0deg, var(--black-transparent), var(--black-transparent));
+}
+
+footer .link-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin: 4px;
+}
+
+.link-box .img-container img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--text-transparent-color);
+    padding: 2px;
+    margin-right: 10px;
+}
+
+.link-box .tex p {
+    color: var(--text-color);
+    font-size: 16.5px;
+}
+
+.link-box .tex a {
+    color: var(--text-color);
+    font: 'Noto Sans JP';
+    font-weight: bold;
+}
+
+/* Estilo móvil (smartphones) */
+@media (max-width: 767px) {
+
+    section,
+    footer {
+        width: 100%;
+    }
+
+    /* SECTION */
+    section {
+        height: 35%;
+    }
+
+    section div {
+        border-radius: 50%;
+        /* Establecer el border-radius en 50% para crear un círculo */
+        width: 90px;
+        /* Ancho deseado del círculo */
+        height: 90px;
+        /* Altura deseada del círculo (puedes ajustar según tus necesidades) */
+    }
+
+
+    section div h1 {
+        font-size: 40px;
+        font: 'Noto Sans JP';
+    }
+
+    section div h2 {
+        font-size: 20px;
+        font: 'Noto Sans JP';
+    }
+
+    /* FOOTER */
+
+    footer {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 65vh;
+    }
+
+    footer .link-box {
+        justify-content: flex-start;
+        width: 250px;
+    }
+
+    .link-box .img-container img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        padding: 2px;
+        margin-right: 10px;
+    }
+
+    .link-box .tex p {
+        font-size: 1rem;
+    }
+
+    .link-box .tex a {
+        font-size: 1rem;
+    }
+
+}
