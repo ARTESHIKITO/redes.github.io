@@ -115,7 +115,7 @@ footer .link-box {
 }
 
 /* Estilo móvil (smartphones) */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
     section,
     footer {
